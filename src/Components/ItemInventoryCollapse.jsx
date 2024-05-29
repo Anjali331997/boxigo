@@ -32,22 +32,23 @@ const ItemInventoryCollapse = ({ key, data }) => {
                                                 ele.items.map((elem, index) => {
                                                     return elem.qty >= 1 ? <div
                                                         style={{ border: "1px black solid" }}>
-                                                        <p>{elem.displayName}-{elem.qty}</p>
-                                                        <span>
-                                                            {
-                                                                elem.type
-                                                                    .filter(typeele => typeele.selected === true)
-                                                                    .map((typeele, typeind) => (
-                                                                        <p key={typeind}>{typeele.option}</p>
-                                                                    ))
-                                                            }
-                                                            <p>
 
+                                                        <span>
+                                                            <p>
+                                                                {ele.displayName}
                                                             </p>
                                                             <p>
                                                                 {elem.qty}
                                                             </p>
                                                         </span>
+                                                        {elem.type.length > 0 ?
+                                                            elem.type
+                                                                .filter(typeele => typeele.selected === true)
+                                                                .map((typeele, typeind) => (
+                                                                    <p key={typeind}>Type:{typeele.option}</p>
+                                                                )) : <p>Type:NA</p>
+                                                        }
+
                                                     </div> : <></>
                                                 })
                                             }
