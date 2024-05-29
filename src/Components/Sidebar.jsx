@@ -12,15 +12,15 @@ import {
 const Sidebar = () => {
   return (
     <div style={{ display: 'flex', overflow: 'scroll initial' }}>
-    <CDBSidebar textColor="#fff" backgroundColor="#9c0101">
+    <CDBSidebar textColor="#9c0101" backgroundColor="white">
       <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-        <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
+        <a href="/" className="text-decoration-none" style={{ color: '#9c0101' }}>
           BOXIGO
         </a>
       </CDBSidebarHeader>
 
       
-      <CDBSidebarContent className="sidebar-content">
+      <CDBSidebarContent className="sidebar-content" style={{ color: '#9c0101' }}>
           <CDBSidebarMenu>
 
             <NavLink exact to="/" activeClassName="activeClicked">
