@@ -5,7 +5,7 @@ import './css/ProductItem.css'
 const ProductItem = ({ data }) => {
     const isflexible = Number(data.move_date_flexible)
     return (
-        <div style={{ display: "flex", gap: "10px", border: "1px solid black", width: "100%", flexDirection: "column" }}>
+        <div className='item-container' >
             <hr />
             <div className='item-header'>
                 <p>
@@ -31,8 +31,9 @@ const ProductItem = ({ data }) => {
                     <b style={{ color: "#9c0101" }}>{data.estimate_id}</b>
                 </p>
             </div>
+
             <div className='item-content'>
-                <div>
+                <div className='infoDiv'>
                     <p>
                         <i className="bi bi-house-door-fill"></i>
                         {data.property_size}
@@ -61,11 +62,10 @@ const ProductItem = ({ data }) => {
                     <button className='quotes-button'>Quotes Awaiting</button>
                 </div>
             </div>
-            <div className='item-footer'>
 
+            <div className='item-footer'>
                 <i class="bi bi-exclamation-triangle-fill"></i>
                 <p><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
-
             </div>
         </div>
     )

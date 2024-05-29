@@ -1,9 +1,16 @@
+.item-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 20px;
+}
 .item-header {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: top;
-    border: 1px solid violet;
+    /* border: 1px solid violet; */
     justify-content: space-evenly;
     width: 100%;
 }
@@ -11,7 +18,7 @@
 .item-header p {
     width: 25%;
     /* border: 1px solid violet; */
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .icons {
@@ -20,5 +27,70 @@
 }
 
 .item-content {
-    border: 1px solid rgb(26, 67, 128);
+    /* border: 1px solid rgb(26, 67, 128); */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    align-items: center;
+    /* border: 1px solid rgb(92, 139, 48); */
+    justify-content: space-between;
+    
+}
+
+.infoDiv i{
+    color: #9c0101;
+    font-size: 18px;
+}
+.infoDiv p{
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 0px;
+}
+
+.item-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.item-footer i{
+    color:#9c0101;
+    font-size: 12;
+}
+.item-footer p{
+    font-size: 12px;
+    margin: 0;
+}
+.buttonDiv{
+    width: 30%;
+    /* border: 1px blue solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.buttonDiv button{
+    width: 48%;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+.details-button{
+    border: 2px solid #9c0101;
+    background-color: #9c01017e;
+}
+.quotes-button{
+    background-color: #9c0101;
+    border: none;
 }
