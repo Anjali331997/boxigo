@@ -1,8 +1,10 @@
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
+import './css/ItemInventory.css'
 
 const ItemInventoryCollapse = ({ key, data }) => {
     const category = data.category;
+
     const count = data.category.map((ele, index) => {
         return (ele.items.reduce((acc, elem) => {
             return acc += Number(elem.qty);
@@ -16,43 +18,42 @@ const ItemInventoryCollapse = ({ key, data }) => {
     return (
         <Accordion>
             <Accordion.Item eventKey={`key`}>
-                <Accordion.Header>
-                    {data.displayName}
-                    <span>-{total}</span>
+                <Accordion.Header className='collapse-header'>
+                    <p className='collapse-heading'> {data.displayName}</p>
+                    <span className='total-display'>{total}</span>
                 </Accordion.Header>
                 <Accordion.Body>
                     {
                         total <= 0 ? <p>No Items in this Category</p> :
-                            <div>
-                                {
-                                    category.map((ele, index) => {
-                                        return <div>
-                                            <h6>{ele.displayName}</h6>
+                            <div className='sub-category-items'>
+{
+                                    count.map((ele, i) => {
+                                        return ele !== 0 ? <div>
+                                            <h6>{category[i].displayName}</h6>
                                             {
-                                                ele.items.map((elem, index) => {
+                                                category[i].items.map((elem, index) => {
                                                     return elem.qty >= 1 ? <div
-                                                        style={{ border: "1px black solid" }}>
-
+                                                        className='items-div'>
                                                         <span>
                                                             <p>
-                                                                {ele.displayName}
+                                                                {category[i].displayName}
                                                             </p>
                                                             <p>
-                                                                {elem.qty}
+                                                                Q:{elem.qty}
                                                             </p>
                                                         </span>
                                                         {elem.type.length > 0 ?
                                                             elem.type
                                                                 .filter(typeele => typeele.selected === true)
                                                                 .map((typeele, typeind) => (
-                                                                    <p key={typeind}>Type:{typeele.option}</p>
-                                                                )) : <p>Type:NA</p>
+                                                                    <p key={typeind} className='type-class'>Type:{typeele.option}</p>
+                                                                )) : <p className='type-class'>Type:NA</p>
                                                         }
 
                                                     </div> : <></>
                                                 })
                                             }
-                                        </div>
+                                        </div>:<></>
                                     })
                                 }
                             </div>
