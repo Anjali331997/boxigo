@@ -6,10 +6,11 @@ import ProductListing from './Pages/ProductListing';
 function App() {
   return (
     <BrowserRouter>
-    <div>
+    <div className='main-container'>
       <Sidebar/>
+      <ProductListing/>
     </div>
-    <ProductListing/>
+    
     </BrowserRouter>
   );
 }
