@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './css/ProductItem.css'
+import './css/ProductItem.css';
+import ProductDetails from './ProductDetails'
 
 const ProductItem = ({ data }) => {
+    const [selectedProductId, setSelectedProductId] = useState(null);
+
+    const handleButtonClick = (id) => {
+        setSelectedProductId(selectedProductId === id ? null : id);
+    };
     const isflexible = Number(data.move_date_flexible)
     return (
         <div className='item-container' >
@@ -58,7 +64,9 @@ const ProductItem = ({ data }) => {
                 </div>
 
                 <div className='buttonDiv'>
-                    <button className='details-button'>View move details</button>
+                    <button className='details-button'
+                        onClick={() => handleButtonClick(data.user_id)}>
+                        View move details</button>
                     <button className='quotes-button'>Quotes Awaiting</button>
                 </div>
             </div>
@@ -67,6 +75,10 @@ const ProductItem = ({ data }) => {
                 <i class="bi bi-exclamation-triangle-fill"></i>
                 <p><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
+
+            {selectedProductId === data.user_id && (
+            <ProductDetails details={data} />
+          )}
         </div>
     )
 }

@@ -17,7 +17,7 @@ const ProductListing = () => {
     }, [])
     return (
         <div>
-            <h1 style={{color:"#9c0101", paddingLeft:"20px"}}>My Moves</h1>
+            <h1 style={{color:"#9c0101", paddingLeft:"20px",marginTop:"5px"}}>My Moves</h1>
             {
             data.map((ele,index)=>{
                 return <ProductItem data={ele} key={index}/>
