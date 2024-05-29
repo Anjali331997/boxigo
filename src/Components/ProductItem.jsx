@@ -3,9 +3,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './css/ProductItem.css'
 
 const ProductItem = ({ data }) => {
+    const isflexible = Number(data.move_date_flexible)
     return (
-        <div style={{ display: "flex", gap: "20px", border: "1px solid black", width: "100%" }}>
-            <hr/>
+        <div style={{ display: "flex", gap: "10px", border: "1px solid black", width: "100%", flexDirection: "column" }}>
+            <hr />
             <div className='item-header'>
                 <p>
                     <b>From</b><br />
@@ -30,8 +31,42 @@ const ProductItem = ({ data }) => {
                     <b style={{ color: "#9c0101" }}>{data.estimate_id}</b>
                 </p>
             </div>
-            <div className='item-content'></div>
-            <div className='item-footer'></div>
+            <div className='item-content'>
+                <div>
+                    <p>
+                        <i className="bi bi-house-door-fill"></i>
+                        {data.property_size}
+                    </p>
+                    <p>
+                        <i className="bi bi-luggage-fill"></i>
+                        {data.total_items}
+                    </p>
+                    <p>
+                        <i className="bi bi-geo-alt-fill"></i>
+                        {data.distance}
+                    </p>
+                    <p>
+                        <i className="bi bi-calendar3"></i>
+                        {data.moving_on}
+                    </p>
+                    <p>
+
+                        <i className={isflexible ? "bi bi-check-square-fill" : "bi bi-x-square-fill"}></i>
+                        Is flexible
+                    </p>
+                </div>
+
+                <div className='buttonDiv'>
+                    <button className='details-button'>View move details</button>
+                    <button className='quotes-button'>Quotes Awaiting</button>
+                </div>
+            </div>
+            <div className='item-footer'>
+
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <p><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
+
+            </div>
         </div>
     )
 }
