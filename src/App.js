@@ -5,7 +5,9 @@ import Sidebar from './Components/Sidebar';
 function App() {
   return (
     <BrowserRouter>
-    <Sidebar/>
+    <div>
+      <Sidebar/>
+    </div>
     </BrowserRouter>
   );
 }
