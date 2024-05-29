@@ -20,7 +20,7 @@ const ProductListing = () => {
             <h1 style={{color:"#9c0101"}}>My Moves</h1>
             {
             data.map((ele,index)=>{
-                return <ProductItem key={index}/>
+                return <ProductItem data={ele} key={index}/>
             })
             }
 
