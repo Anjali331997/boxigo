@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Sidebar from './Components/Sidebar';
+import ProductListing from './Pages/ProductListing';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Sidebar/>
     </div>
+    <ProductListing/>
     </BrowserRouter>
   );
 }
