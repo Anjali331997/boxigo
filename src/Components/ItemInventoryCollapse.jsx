@@ -2,6 +2,7 @@ import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 
 const ItemInventoryCollapse = ({ key, data }) => {
+    const category = data.category;
     const count = data.category.map((ele, index) => {
         return (ele.items.reduce((acc, elem) => {
             return acc += Number(elem.qty);
@@ -14,19 +15,47 @@ const ItemInventoryCollapse = ({ key, data }) => {
 
     return (
         <Accordion>
-            <Accordion.Item eventKey={key}>
+            <Accordion.Item eventKey={`key`}>
                 <Accordion.Header>
                     {data.displayName}
                     <span>-{total}</span>
                 </Accordion.Header>
                 <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    {
+                        total <= 0 ? <p>No Items in this Category</p> :
+                            <div>
+                                {
+                                    category.map((ele, index) => {
+                                        return <div>
+                                            <h6>{ele.displayName}</h6>
+                                            {
+                                                ele.items.map((elem, index) => {
+                                                    return elem.qty >= 1 ? <div
+                                                        style={{ border: "1px black solid" }}>
+                                                        <p>{elem.displayName}-{elem.qty}</p>
+                                                        <span>
+                                                            {
+                                                                elem.type
+                                                                    .filter(typeele => typeele.selected === true)
+                                                                    .map((typeele, typeind) => (
+                                                                        <p key={typeind}>{typeele.option}</p>
+                                                                    ))
+                                                            }
+                                                            <p>
+
+                                                            </p>
+                                                            <p>
+                                                                {elem.qty}
+                                                            </p>
+                                                        </span>
+                                                    </div> : <></>
+                                                })
+                                            }
+                                        </div>
+                                    })
+                                }
+                            </div>
+                    }
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
