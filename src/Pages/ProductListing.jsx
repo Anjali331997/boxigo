@@ -23,9 +23,16 @@ const ProductListing = () => {
     }, [])
 
     if (state.loading === true) {
-        return <>
+        return <div style={{width:"100%"}}>
+            <h1 style={{ color: "#9c0101", paddingLeft: "20px", marginTop: "5px" }}>My Moves</h1>
             <ProductionItemSkeleton />
-        </>
+            <br />
+            <ProductionItemSkeleton/>
+            <br />
+            <ProductionItemSkeleton/>
+            <br />
+            <ProductionItemSkeleton/>
+        </div>
     }
     return (
         <div>

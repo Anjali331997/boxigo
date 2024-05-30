@@ -12,7 +12,7 @@ const ProductionItemSkeleton = () => {
                 </p>
 
                 <p className='icons'>
-                    <i class="bi bi-arrow-right-circle"
+                    <i className="bi bi-arrow-right-circle  placeholder"
                         style={{
                             color: "#9c0101",
                             fontSize: "25px",
@@ -64,7 +64,7 @@ const ProductionItemSkeleton = () => {
                 </div>
             </div>
 
-            <div className='item-footer'>
+            <div className='item-footer placeholder'>
                 <i class="bi bi-exclamation-triangle-fill" className='placeholder'></i>
                 <p className='placeholder'><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
