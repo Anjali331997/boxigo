@@ -65,7 +65,7 @@ const ProductionItemSkeleton = () => {
             </div>
 
             <div className='item-footer placeholder-glow'>
-                <i class="bi bi-exclamation-triangle-fill" className='placeholder'></i>
+                <i className="bi bi-exclamation-triangle-fill placeholder" ></i>
                 <p className='placeholder'><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
         </div>

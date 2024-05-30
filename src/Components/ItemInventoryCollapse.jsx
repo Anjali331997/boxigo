@@ -47,7 +47,7 @@ const ItemInventoryCollapse = ({ key, data }) => {
                                                                 .filter((typeele) => typeele.selected === true)
                                                                 .map((typeele, typeind) => (
                                                                     <p key={typeind} className='type-class'>Type:{typeele.option}</p>
-                                                                )) : <p  className='type-class'>Type:NA</p>
+                                                                )) : <p key={i} className='type-class'>Type:NA</p>
                                                         }
 
                                                     </div> : <></>

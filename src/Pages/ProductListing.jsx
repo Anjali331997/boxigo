@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import ProductItem from '../Components/ProductItem';
+
 import ProductionItemSkeleton from '../Components/ProductionItemSkeleton';
 
 const ProductListing = () => {
@@ -11,7 +12,8 @@ const ProductListing = () => {
     const [state, setState] = useState(intialState);
 
     const url = process.env.REACT_APP_BACKEND_URL;
-    console.log(url)
+    // console.log(process)
+    // console.log(url)
 
     const fetchData = async () => {
         await axios.get(`${process.env.REACT_APP_BACKEND_URL}/sample-data`).then((res) => {
@@ -25,15 +27,15 @@ const ProductListing = () => {
     }, [])
 
     if (state.loading === true) {
-        return <div style={{width:"100%"}}>
+        return <div style={{ width: "100%" }}>
             <h1 style={{ color: "#9c0101", paddingLeft: "20px", marginTop: "5px" }}>My Moves</h1>
             <ProductionItemSkeleton />
             <br />
-            <ProductionItemSkeleton/>
+            <ProductionItemSkeleton />
             <br />
-            <ProductionItemSkeleton/>
+            <ProductionItemSkeleton />
             <br />
-            <ProductionItemSkeleton/>
+            <ProductionItemSkeleton />
         </div>
     }
     return (

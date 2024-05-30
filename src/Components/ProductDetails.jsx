@@ -4,6 +4,7 @@ import './css/ProductDetails.css'
 import axios from 'axios';
 
 
+
 const ProductDetails = ({ id }) => {
 
   const initialState = {
