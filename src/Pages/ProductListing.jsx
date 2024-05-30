@@ -10,9 +10,11 @@ const ProductListing = () => {
     }
     const [state, setState] = useState(intialState);
 
+    const url = process.env.REACT_APP_BACKEND_URL;
+    console.log(url)
+
     const fetchData = async () => {
-        await axios.get(`${process.env.REACT_BACKEND_URL}/sample-data/`).then((res) => {
-            // console.log(res.data.Customer_Estimate_Flow);
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/sample-data`).then((res) => {
             setState({ ...state, data: res.data.Customer_Estimate_Flow, loading: false })
         })
     }
