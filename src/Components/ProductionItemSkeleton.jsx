@@ -33,21 +33,24 @@ const ProductionItemSkeleton = () => {
                 <div className='infoDiv'>
                     <p className='placeholder'>
                         <i className="bi bi-house-door-fill"></i>
+                        house
                     </p>
                     <p className='placeholder'>
                         <i className="bi bi-luggage-fill"></i>
+                        no of package
                      
                     </p>
                     <p className='placeholder'>
                         <i className="bi bi-geo-alt-fill"></i>
+                        distance
                        
                     </p>
                     <p className='placeholder'>
                         <i className="bi bi-calendar3"></i>
+                        date-date-date
                         
                     </p>
                     <p className='placeholder'>
-
                         <i className="bi bi-check-square-fill"></i>
                         Is flexible
                     </p>
