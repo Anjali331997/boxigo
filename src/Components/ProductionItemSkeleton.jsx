@@ -50,7 +50,7 @@ const ProductionItemSkeleton = () => {
                         date-date-date
                         
                     </p>
-                    <p className='placeholder-glow'>
+                    <p className='placeholder'>
                         <i className="bi bi-check-square-fill"></i>
                         Is flexible
                     </p>
