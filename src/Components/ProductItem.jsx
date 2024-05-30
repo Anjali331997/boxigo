@@ -65,7 +65,7 @@ const ProductItem = ({ data }) => {
 
                 <div className='buttonDiv'>
                     <button className='details-button'
-                        onClick={() => handleButtonClick(data.user_id)}>
+                        onClick={() => handleButtonClick(data.estimate_id)}>
                         View move details</button>
                     <button className='quotes-button'>Quotes Awaiting</button>
                 </div>
@@ -76,9 +76,9 @@ const ProductItem = ({ data }) => {
                 <p><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
 
-            {selectedProductId === data.user_id && (
-            <ProductDetails details={data} />
-          )}
+            {selectedProductId === data.estimate_id && (
+                <ProductDetails id={data.estimate_id} />
+            )}
         </div>
     )
 }

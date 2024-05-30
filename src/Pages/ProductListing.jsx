@@ -7,7 +7,7 @@ const ProductListing = () => {
 
     const fetchData = async() => {
         await axios.get(`http://test.api.boxigo.in/sample-data/`).then((res)=>{
-            console.log(res.data.Customer_Estimate_Flow);
+            // console.log(res.data.Customer_Estimate_Flow);
             setData((prev)=>res.data.Customer_Estimate_Flow)
         })
     }

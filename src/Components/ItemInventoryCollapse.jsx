@@ -28,12 +28,12 @@ const ItemInventoryCollapse = ({ key, data }) => {
                             <div className='sub-category-items'>
 {
                                     count.map((ele, i) => {
-                                        return ele !== 0 ? <div>
+                                        return ele !== 0 ? <div key={i}>
                                             <h6>{category[i].displayName}</h6>
                                             {
                                                 category[i].items.map((elem, index) => {
                                                     return elem.qty >= 1 ? <div
-                                                        className='items-div'>
+                                                        className='items-div' key={index}>
                                                         <span>
                                                             <p>
                                                                 {category[i].displayName}
@@ -44,10 +44,10 @@ const ItemInventoryCollapse = ({ key, data }) => {
                                                         </span>
                                                         {elem.type.length > 0 ?
                                                             elem.type
-                                                                .filter(typeele => typeele.selected === true)
+                                                                .filter((typeele) => typeele.selected === true)
                                                                 .map((typeele, typeind) => (
                                                                     <p key={typeind} className='type-class'>Type:{typeele.option}</p>
-                                                                )) : <p className='type-class'>Type:NA</p>
+                                                                )) : <p  className='type-class'>Type:NA</p>
                                                         }
 
                                                     </div> : <></>
