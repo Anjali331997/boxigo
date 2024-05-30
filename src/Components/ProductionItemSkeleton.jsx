@@ -6,20 +6,20 @@ const ProductionItemSkeleton = () => {
   return (
     <div className='item-container' >
             <hr />
-            <div className='item-header'>
+            <div className='item-header placeholder-glow'>
                 <p className='placeholder'>
                     <b>From</b><br />
                 </p>
 
                 <p className='icons'>
-                    <i className="bi bi-arrow-right-circle  placeholder-glow"
+                    <i className="bi bi-arrow-right-circle  placeholder"
                         style={{
                             color: "#9c0101",
                             fontSize: "25px",
                         }}></i>
                 </p>
 
-                <p className='placeholder'>
+                <p className='placeholder '>
                     <b>To</b><br />
                 </p>
 
@@ -29,7 +29,7 @@ const ProductionItemSkeleton = () => {
                 </p>
             </div>
 
-            <div className='item-content'>
+            <div className='item-content placeholder-glow'>
                 <div className='infoDiv'>
                     <p className='placeholder'>
                         <i className="bi bi-house-door-fill"></i>
@@ -64,7 +64,7 @@ const ProductionItemSkeleton = () => {
                 </div>
             </div>
 
-            <div className='item-footer placeholder'>
+            <div className='item-footer placeholder-glow'>
                 <i class="bi bi-exclamation-triangle-fill" className='placeholder'></i>
                 <p className='placeholder'><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
