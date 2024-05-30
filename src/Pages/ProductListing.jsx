@@ -11,7 +11,7 @@ const ProductListing = () => {
     const [state, setState] = useState(intialState);
 
     const fetchData = async () => {
-        await axios.get(`http://test.api.boxigo.in/sample-data/`).then((res) => {
+        await axios.get(`${process.env.REACT_BACKEND_URL}/sample-data/`).then((res) => {
             // console.log(res.data.Customer_Estimate_Flow);
             setState({ ...state, data: res.data.Customer_Estimate_Flow, loading: false })
         })
