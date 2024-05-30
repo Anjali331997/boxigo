@@ -20,7 +20,7 @@ const ProductItem = ({ data }) => {
                 </p>
 
                 <p className='icons'>
-                    <i class="bi bi-arrow-right-circle"
+                    <i className="bi bi-arrow-right-circle"
                         style={{
                             color: "#9c0101",
                             fontSize: "25px",
@@ -72,7 +72,7 @@ const ProductItem = ({ data }) => {
             </div>
 
             <div className='item-footer'>
-                <i class="bi bi-exclamation-triangle-fill"></i>
+                <i className="bi bi-exclamation-triangle-fill"></i>
                 <p><b>Disclaimer:</b>Please update your move date before two days of shifting</p>
             </div>
 
