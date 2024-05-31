@@ -16,7 +16,7 @@ const ProductListing = () => {
     // console.log(url)
 
     const fetchData = async () => {
-        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/sample-data`).then((res) => {
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}`).then((res) => {
             setState({ ...state, data: res.data.Customer_Estimate_Flow, loading: false })
         })
     }

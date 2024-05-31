@@ -17,7 +17,7 @@ const ProductDetails = ({ id }) => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/sample-data`);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}`);
       const item = await res.data.Customer_Estimate_Flow.filter((ele) => ele.estimate_id === id)
       setState({ ...state, data: item[0], loading: false,inventory:item[0].items.inventory });
     } catch (err) {
