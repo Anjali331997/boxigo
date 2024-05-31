@@ -51,13 +51,39 @@ To run this project, you will need to add the following environment variables to
 All the data is fetched from backend API: https://vercel.com/anjali331997s-projects/boxico-backend/api/sample-data
 
 
+
+
+
+
+
 ## Features
 
 - Hamburger Menu
 - Skeleton Loading
 - Full Responsive
 
+
+
 ## Screenshots
 
+Dashboard:
 ![App Screenshot](https://drive.google.com/uc?id=1LT2QHfZHAufh2rzFhO-0rt3EO0EbM7FZ)
+
+Responsive Sidebar:
+![App Screenshot](https://drive.google.com/file/d/1s895OXFpq69p_kt8-gqfhtUmwG7Im1C8/view)
+
+Skeleton loading feature while fetching data from backend:
+![App Screenshot](https://drive.google.com/file/d/1_mLUQmoWkdflk9fi3f_CjFWzmwgj_jD9/view)
+
+![App Screenshot](https://drive.google.com/file/d/1Sv91THWONaTMG6zv-EglXFoL6prHMrY_/view)
+
+Responsive Design:
+![App Screenshot](https://drive.google.com/file/d/1f9D81Q2l5mlD_lADvPTwIAMd0H3zyRdE/view)
+
+![App Screenshot](https://drive.google.com/file/d/1feUlEB4gr25HKkXJS4keTY3anx-KMWUT/view)
+
+
+
+
+
 
