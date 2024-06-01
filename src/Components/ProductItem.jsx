@@ -66,7 +66,10 @@ const ProductItem = ({ data }) => {
                 <div className='buttonDiv'>
                     <button className='details-button'
                         onClick={() => handleButtonClick(data.estimate_id)}>
-                        View move details</button>
+                            {
+                                selectedProductId != null ? "View less details":"View more details"
+                            }
+                        </button>
                     <button className='quotes-button'>Quotes Awaiting</button>
                 </div>
             </div>
